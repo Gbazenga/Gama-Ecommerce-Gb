@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>Gama Ecommerce</title>
+  </head>
+  <body>
+
+    <div id="root"></div>
+    <div style="text-align: center;padding: 0 0 50px 0; background:rgb(75, 75, 75)">
+      <h4 style="color:#fff; font-size:30px;padding:40px 0;" >Para mais Informações, cadastre seu dados</h4>
+      <input id="name" size="30" required placeholder="NOME" style="padding:5px 20px;margin-bottom:20px"><br>
+      <input type="email" id="email" pattern=".+@globex\.com" size="30" required placeholder="EMAIL" style="padding:5px 20px"><br>
+      <button onclick="store()" type="button reset" value="reset" style="padding:5px 80px;margin-top:30px">Cadastrar</button>
+    </div>
+
+
+    <script  type="text/javascript">
+      function store(){
+        var inputName= document.getElementById("name");
+        localStorage.setItem("name", inputName.value);
+        var inputEmail= document.getElementById("email");
+        localStorage.setItem("email", inputEmail.value);
+        alert("Cadastro realizado!");
+        inputName.value="";
+        inputEmail.value="";
+        }
+    </script>
+
+  </body>
+</html>
